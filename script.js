@@ -11,10 +11,14 @@ function toggleMenu() {
         nav.style.display = "block";
     }
 }
-
-// JavaScript Output Example using ID
-function showMessage() {
-    document.getElementById("output").innerHTML = "JavaScript is working!";
-
-   
+ 
+// Function to update text when "Get Started" button is clicked
+function getStarted() {
+    document.getElementById("outputs").innerHTML = "Let's get started!";
 }
+
+// Function to update text when "Start Planning" button is clicked
+function startPlanning() {
+    document.getElementById("output").innerHTML = "Your trip planning has started!";
+}
+
