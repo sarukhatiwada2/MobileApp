@@ -1,46 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Namaste Nepal</title>
+     
+
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">Namaste Nepal
-          <img id ="image_logo" src="logo_image.png">
+    <!-- Language Selection Page -->
+    <div class="container">
+        <div class="page active" id="language-page">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src= "Image\logo.png">
+                </div>  
+            </div>
+            <div class="language-selection">
+                <h2>In which language would you prefer it in?</h2>
+                <button class="btn language-btn" data-lang="english">English</button>
+                <button class="btn language-btn" data-lang="nepali">Nepali</button>
+            </div>
+            <button class="btn continue-btn" id="continue-btn">Continue</button>
         </div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Account</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Help</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-       
-
-    </nav>
-
-    <!--main Section -->
-    <section class="main">
-        <h1>Welcome to Namaste Nepal</h1>
-        <p id="outputs">Explore beautiful places, book hotels, and plan your journey effortlessly.</p>
-        <button onclick="getStarted()">Get Started</button>
-    </section>
-
- 
-    <div class="js-output">
-        <h2>Plan Your Trip</h2>
-        <p id="output">Get personalized travel recommendations and book your journey with ease.</p>
-        <button type="button" onclick="startPlanning()">Start Planning</button>
+        
+        <!-- Authentication Options Page -->
+        <div class="page" id="auth-options-page">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src= "Image\logo.png">
+                </div>  
+            </div>
+            <div class="auth-container">
+                <button class="btn" id="signin-btn">Sign In</button>
+                <button class="btn btn-light" id="signup-btn">Sign Up</button>
+            </div>
+        </div>
+        
+        <!-- Sign In Page -->
+        <div class="page" id="signin-page">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src= "Image\logo.png">
+                </div>  
+            </div>
+            <form class="auth-container">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password">
+                </div>
+                <button class="btn" id="login-btn">Login</button>
+                <div class="links">
+                    <a href="#" id="forgot-password">Forgot Password?</a>
+                    <a href="#" id="go-to-signup">Sign Up</a>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Sign Up Page -->
+        <div class="page" id="signup-page">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src= "Image\logo.png">
+                </div>  
+            </div>
+            <form class="auth-container">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create a password">
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Confirm your password">
+                </div>
+                <button class="btn" id="create-account-btn">Create Account</button>
+                <div class="links">
+                    <a href="#" id="go-to-signin">Already have an account? Sign In</a>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Home Page -->
+        <div class="page" id="home-page">
+            <div class="logo-container" style="margin-top: 20px; margin-bottom: 20px;">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src= "Image\logo.png">
+                    </div>  
+                </div>
+                <div class="app-name" style="font-size: 20px;">Namaste Nepal</div>
+            </div>
+            
+            <h2 class="section-title">Our Services</h2>
+            
+            <div class="service-card">
+                <h3>Hotel Bookings</h3>
+                <p>Find and book the best hotels all around Nepal.</p>
+                <button class="btn" id="book-hotel-btn">Book Now</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Itinerary Planning</h3>
+                <p>Plan your perfect Nepal trip with customized itineraries.</p>
+                <button class="btn" id="plan-itinerary-btn">Plan Now</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Destinations</h3>
+                <p>Explore the beautiful destinations of Nepal.</p>
+                <button class="btn" id="view-destinations-btn">View Now</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Ride</h3>
+                <p>Book rides to explore Nepal with comfort.</p>
+                <button class="btn" id="book-ride-btn">Book Now</button>
+            </div>
+        </div>
+        
+        <!-- Hotel Booking Page -->
+        <div class="page" id="hotel-page">
+            <h2 class="section-title">Hotel Bookings</h2>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search hotels...">
+                <i>🔍</i>
+            </div>
+            
+            <div class="hotel-card">
+                <div class="hotel-img">
+                    <img src="Image\image copy.png" alt="Yak & Yeti Hotel" />
+                </div>
+                <div class="hotel-info">
+                    <h3>Yak & Yeti Hotel</h3>
+                    <div class="hotel-rating">★★★★★</div>
+                    <p>Durbar Marg, Kathmandu</p>
+                    <p>From $100 per night</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="hotel-card">
+                <div class="hotel-img">
+                    <img src="Image\Hotel-Annapurna.jpg" alt="Hotel Annapurna" />
+                </div>
+                <div class="hotel-info">
+                    <h3>Hotel Annapurna</h3>
+                    <div class="hotel-rating">★★★★☆</div>
+                    <p>Durbar Marg, Kathmandu</p>
+                    <p>From $80 per night</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="hotel-card">
+                <h3>Hotel Pokhara Grande</h3>
+                <div class="hotel-img">
+                    <img src="Image\pokhara.png" alt="Hotel Pokhara Grande" />
+                </div>
+                <div class="hotel-info">
+    
+                    <div class="hotel-rating">★★★★☆</div>
+                    <p>Lakeside, Pokhara</p>
+                    <p>From $75 per night</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Itinerary Planning Page -->
+        <div class="page" id="itinerary-page">
+            <h2 class="section-title">Itinerary Planning</h2>
+            
+            <div class="itinerary-section">
+                <h3>Choose Destination</h3>
+                <select class="form-group">
+                    <option>Select Destination</option>
+                    <option>Kathmandu</option>
+                    <option>Pokhara</option>
+                    <option>Chitwan</option>
+                    <option>Lumbini</option>
+                    <option>Nagarkot</option>
+                </select>
+                <button class="btn">Select</button>
+            </div>
+            
+            <div class="itinerary-section">
+                <h3>Select Travel Dates</h3>
+                <div class="form-group">
+                    <label>From</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <input type="date">
+                </div>
+                <button class="btn">Add Date</button>
+            </div>
+            
+            <div class="itinerary-section">
+                <h3>Select Hotels and Restaurants</h3>
+                <div class="form-group">
+                    <label>Hotel Preference</label>
+                    <select>
+                        <option>Budget</option>
+                        <option>Mid-range</option>
+                        <option>Luxury</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Restaurant Preference</label>
+                    <select>
+                        <option>Local Cuisine</option>
+                        <option>International Cuisine</option>
+                        <option>Mixed</option>
+                    </select>
+                </div>
+                <button class="btn">Choose</button>
+            </div>
+            
+            <div class="total-cost">Total: $0</div>
+        </div>
+        
+        <!-- Destinations Page -->
+        <div class="page" id="destinations-page">
+            <h2 class="section-title">Destinations</h2>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search destinations...">
+                <i>🔍</i>
+            </div>
+            
+            <div class="destination-card">
+                <div class="destination-img">
+                    <img src="Image\pashupati.png" alt="Pashupatinath Temple" />
+                </div>
+                <div class="destination-info">
+                    <h3>Pashupatinath Temple</h3>
+                    <p>One of the most sacred Hindu temples of Nepal located on the banks of the Bagmati River.</p>
+                    <div class="destination-actions">
+                        <button class="btn" id="view-pashupatinath">View Details</button>
+                        <button class="btn btn-light" id="visit-pashupatinath">Visit</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="destination-card">
+                <div class="destination-img">
+                    <img src="Image\Swoyambhu.png" alt="Swoyambhu" />
+                </div>
+                <div class="destination-info">
+                    <h3>Swoyambhunath Temple</h3>
+                    <p>Swoyambhunath, one of the most ancient and sacred Buddhist sites in Nepal, sits atop a hill overlooking Kathmandu with its iconic white dome and Buddha eyes.</p>
+                    <div class="destination-actions">
+                        <button class="btn" id="view-pashupatinath">View Details</button>
+                        <button class="btn btn-light" id="visit-pashupatinath">Visit</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="destination-card">
+                <div class="destination-img">
+                    <img src="Image\Boudha.png" alt="Boudhanath Stupa" />
+                </div>
+                <div class="destination-info">
+                    <h3>Boudhanath Stupa</h3>
+                    <p>One of the largest spherical stupas in Nepal and the holiest Tibetan Buddhist temple outside Tibet.</p>
+                    <div class="destination-actions">
+                        <button class="btn" id="view-boudhanath">View Details</button>
+                        <button class="btn btn-light" id="visit-boudhanath">Visit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Destination Details Page -->
+        <div class="page" id="destination-details-page">
+            <h2 class="section-title" id="destination-name">Pashupatinath Temple</h2>
+            
+            <div class="destination-img" style="height: 200px;">
+                <img src="Image\pashupati.png" alt="Pashupatinath Temple Detail" />
+            </div>
+            
+            <div class="details-content">
+                <h3>About</h3>
+                <p>Pashupatinath Temple is one of the most sacred Hindu temples in Nepal, located on the banks of the Bagmati River in eastern Kathmandu. The temple is dedicated to Pashupati, an incarnation of the Hindu god Shiva.</p>
+                
+                <h3>History</h3>
+                <p>The temple was built in the 5th century and later renovated by Malla kings. The existing temple was constructed in the 17th century to replace the previous one which was destroyed by termites.</p>
+                
+                <h3>Significance</h3>
+                <p>Pashupatinath is the most important temple dedicated to god Shiva. Every year, thousands of pilgrims from all over the world visit this temple.</p>
+                
+                <h3>Visiting Hours</h3>
+                <p>4:00 AM to 9:00 PM daily</p>
+                
+                <h3>Entry Fee</h3>
+                <p>NPR 1000 for foreigners, free for Nepali citizens</p>
+                
+                <button class="btn" style="margin-top: 20px;" id="back-to-destinations">Back to Destinations</button>
+            </div>
+        </div>
+        
+        <!-- Map Page -->
+        <div class="page" id="map-page">
+            <h2 class="section-title" id="map-destination-name">Pashupatinath Temple</h2>
+            
+            <div class="map-container">
+                <img src="Image\Pashupati_map.png" alt="Map of Pashupatinath Temple" />
+            </div>
+            
+            <div class="details-content">
+                <h3>Address</h3>
+                <p>Pashupati Nath Road, Kathmandu 44600, Nepal</p>
+                
+                <h3>Directions</h3>
+                <p>Located approximately 5 km northeast of Kathmandu and is easily accessible by taxi or bus from the city center.</p>
+                
+                <h3>Nearby Places</h3>
+                <p>- Boudhanath Stupa (3 km)<br>- Guhyeshwari Temple (0.5 km)<br>- Kathmandu Durbar Square (4 km)</p>
+                
+                <button class="btn" style="margin-top: 20px;" id="back-from-map">Back</button>
+            </div>
+        </div>
+    
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar" style="display: none;">
+        <a href="#" class="nav-item active" id="nav-home">
+            <i>🏠</i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-destinations">
+            <i>🗺️</i>
+            <span>Destinations</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-hotels">
+            <i>🏨</i>
+            <span>Hotels</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-itinerary">
+            <i>📝</i>
+            <span>Itinerary</span>
+        </a>
     </div>
-    <script src="script.js"></script>
+
+    <script src="Responsive.js"></script>
     
 </body>
 </html>
-
